@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orang Spesial</title>
+  <title>untuk kamu</title>
   <meta name="description" content="Semangat beraktifitas ya sayang">
   <meta name="author" content="Wafa Rifqi Anafin">
   <link rel="stylesheet" href="css/style.css">
@@ -14,9 +14,78 @@
   <link rel="stylesheet" href="css/buciners.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
+  <style>
+  /* Hujan love */
+  .love-hujan {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .love-hujan span {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: jatuhLove 5s linear infinite;
+    opacity: 0.8;
+  }
+
+  @keyframes jatuhLove {
+    0% {
+      transform: translateY(-60px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .love-hujan span:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .love-hujan span:nth-child(2) { left: 30%; animation-delay: 1s; }
+  .love-hujan span:nth-child(3) { left: 50%; animation-delay: 2s; }
+  .love-hujan span:nth-child(4) { left: 70%; animation-delay: 3s; }
+  .love-hujan span:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+  /* Stiker Beruang Lucu */
+  .stiker-beruang {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 80px;
+    height: auto;
+    z-index: 5;
+    animation: goyangBeruang 2s ease-in-out infinite;
+  }
+
+  @keyframes goyangBeruang {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+  }
+</style>
+
+
 </head>
 
 <body>
+
+  <!-- Animasi hujan love -->
+<div class="love-hujan">
+  <span>❤️</span>
+  <span>💖</span>
+  <span>💗</span>
+  <span>💕</span>
+  <span>💓</span>
+</div>
+
+<!-- Stiker beruang lucu -->
+<img src="gambar/pngtree-pita-merah-png-image_6991470.png" alt="Beruang Lucu" class="stiker-beruang">
+
 
   <div class="kontener2" id="kontener2">
     <h1>Hai Kamu</h1>
@@ -31,7 +100,7 @@
       <section class="halaman1 dalemnya_halaman" onclick="PindahKeHalaman(0)">
         <h1 class="judul_halaman">Sulis Alifa Ashovi</h1>
         <br>
-       <img src="gambar/fotoseseorang.jpg" alt="Web Bucin Html, Css, Js" class="gambar" width="250">
+       <img src="gambar/fotoseseorang.jpg" alt="Web Bucin Html, Css, Js" class="gambar" width="250"><img src="gambar/hmm.png" alt="Web Bucin Html, Css, Js" class="gambar" width="100">
         <br>
         <div class="ucapan1">
           <p class="isiucapan1">Hai Sulis Alifa Ashovi 🌸
@@ -42,7 +111,7 @@ Ingat ya, setiap hari di pondok adalah langkah kecil menuju impian besar. Walau 
       <section class="halaman2 dalemnya_halaman" onclick="PindahKeHalaman(1)">
         <h1 class="judul_halaman">Semoga Allah selalu memberikanmu kemudahan</h1>
         <br>
-        <img src="gambar/foto4.jpg" alt="Web Bucin Html, Css, Js" class="gambar" width="250">
+        <img src="gambar/cwo.png" alt="Web Bucin Html, Css, Js" class="gambar" width="100"><img src="gambar/foto4.jpg" alt="Web Bucin Html, Css, Js" class="gambar" width="250"> <img src="gambar/cwe.png" alt="Web Bucin Html, Css, Js" class="gambar" width="100">
         <br>
         <div class="ucapan2">
           <p class="isiucapan2">🌸Di pondok, kau menanam benih ilmu dan kesabaran, Setiap doa yang kau panjatkan adalah cahaya penuntun masa depan. Meski rindu dan lelah kadang menyapa, Ingatlah, Allah selalu menjaga langkahmu. Tetaplah tegar, tetaplah bersemangat,
@@ -53,7 +122,7 @@ Ingat ya, setiap hari di pondok adalah langkah kecil menuju impian besar. Walau 
       <section class="halaman3 dalemnya_halaman" onclick="PindahKeHalaman(2)">
         <h1 class="judul_halaman">Semoga kamu bisa mencapai semua impian kamu</h1>
         <br>
-       <img src="gambar/foto3.jpg" alt="Web Bucin Html, Css, Js" class="gambar" width="250">
+      <img src="gambar/foto3.jpg" alt="Web Bucin Html, Css, Js" class="gambar" width="250">  <img src="gambar/peluk.png" alt="Web Bucin Html, Css, Js" class="gambar" width="100">
         <br>
         <div class="ucapan3">
           <p class="isiucapan3">Kamu jangan lupa…
@@ -72,19 +141,19 @@ Kamu hebat, jangan pernah menyerah</p>
           var jam = hari.getHours();
           if (jam >= 0 && jam < 12) {
             document.write(
-              "<h1 class='ucapan'>Selamat Pagi Sulis!</h1><p class='isiucapan'>Good moring sulis, gimana kabarnya? semoga baik yaa<p>"
+              "<h1 class='ucapan'>Hii good Morning!</h1><p class='isiucapan'>Good moring sulis, gimana kabarnya? semoga baik yaa<p>"
             );
           } else if (jam == 12) {
             document.write(
-              "<h1 class='ucapan'>Selamat Siang Sulis!</h1><p class='isiucapan'>hai Kamu jangan lupa makan yaa, jaga kesehatan kamuu <3<p>"
+              "<h1 class='ucapan'>Hii Good Afternoon!</h1><p class='isiucapan'>hai Kamu jangan lupa makan yaa, jaga kesehatan kamuu<p>"
             );
           } else if (jam >= 12 && jam <= 17) {
             document.write(
-              "<h1 class='ucapan'>Selamat Siang Menjelang Sore Sulis!</h1><p class='isiucapan'>Jangan Lupa Sholat yaa + Jam demi jam telah kamu lalui dengan baik, persiapkan diri kamu untuk aktifitas yang akan datang yaa :)<p>"
+              "<h1 class='ucapan'>Hii Good Afternoon!</h1><p class='isiucapan'>Jangan Lupa Sholat yaa + Jam demi jam telah kamu lalui dengan baik, persiapkan diri kamu untuk aktifitas yang akan datang yaa :)<p>"
             );
           } else {
             document.write(
-              "<h1 class='ucapan'>Selamat Malam Sulis!</h1><p class='isiucapan'>Ga kerasa udah malem aja ya, kini telah tiba saatnya untuk kamu beristirahat, good night yaa sweet dreams :)<p>"
+              "<h1 class='ucapan'>Hii Good Night!</h1><p class='isiucapan'>Ga kerasa udah malem aja ya, kini telah tiba saatnya untuk kamu beristirahat, good night yaa sweet dreams :)<p>"
             );
           }
           document.write("</center>");
